@@ -12,7 +12,9 @@
       </svg>
     </label>
     <div class="ae-container-fluid rk-topbar">
-      <h1 class="rk-logo"><a routerLink="">JONY<sup>glez</sup></a></h1><!--routerLink="" vacío porque va al portafolio-->
+      <h1 class="rk-logo">
+        <a routerLink="home">{{_infoService.info.titulo}}<sup>{{_infoService.info.secundario}}</sup></a></h1>
+        <!--routerLink="" vacío porque va al portafolio-->
       <nav class="rk-navigation">
         <ul class="rk-menu">
           <li routerLinkActive="active" class="rk-menu__item"><a routerLink="/home" class="rk-menu__link">Home</a>

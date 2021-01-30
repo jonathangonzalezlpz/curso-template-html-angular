@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+
+import { HttpClientModule } from '@angular/common/http'; //necesario para el info-pagina.service
 //Rutas
 import { AppRoutingModule } from './app-routing.modulo';
 
@@ -22,9 +24,10 @@ import { ProductoComponent } from './pages/producto/producto.component';
   ],
   imports: [ //La parte de los módulos por lo general va aquí
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [], //Anteriormente los servicios se colocan aqui, pero actualmente el injectable del propio servicio lo soluciona
   bootstrap: [AppComponent]
 })
 export class AppModule { }
