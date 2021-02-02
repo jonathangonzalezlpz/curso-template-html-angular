@@ -3,11 +3,14 @@ import { Routes, RouterModule } from '@angular/router';
 import { PortafolioComponent } from './pages/portafolio/portafolio.component';
 import { AboutComponent } from './pages/about/about.component';
 import { ProductoComponent } from './pages/producto/producto.component';
+import { SearchComponent } from './pages/search/search.component';
 
 const app_routes: Routes = [
     { path: 'home', component: PortafolioComponent}, //cambiamos ''vacío por home para evitar pequeños bugss relacionados con routerlinkActive
     { path: 'about', component: AboutComponent},
-    { path: 'producto', component: ProductoComponent },
+    { path: 'producto/:id', component: ProductoComponent }, //Especifico que tengo que enviar el id
+    { path: 'search/:termino', component: SearchComponent }, //Especifico que tengo que enviar el id
+
     { path: '**', pathMatch: 'full', redirectTo: 'home'} //Cualquier cosa distinta de las routas indicadas redirige a portafolio 
 ];
 
